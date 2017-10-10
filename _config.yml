@@ -69,10 +69,10 @@ disqus_username: lulongji
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: b50bf2b12b5338a1845e33832976fd68
+ba_track_id: b91b6efc678be9f6b3863953cae325c6
 
 # Google Analytics
-ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
+ga_track_id: 'UA-107851854-1'            # Format: UA-xxxxxx-xx
 ga_domain: auto
 
 
