@@ -4,15 +4,15 @@ SEOTitle: 鲁龙基的博客 | LULONGJI Blog
 header-img: img/post-bg-desk.jpg
 email: lulongji2011@163.com
 description: "Every failure is leading towards success."
-keyword: "LULONGJI, LULONGJI Blog, 柏荧的博客, lulongji, 邱柏荧, iOS, Apple, iPhone"
+keyword: "LULONGJI, LULONGJI Blog, 鲁龙基的博客, lulongji, 鲁龙基, iOS, Apple, iPhone ,java ,spring ,linux"
 url: "http://lulongji.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/lulongji/lulongji.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "Success and failure are only moments!"
+sidebar-avatar: /img/about-LULONGJI-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -22,7 +22,7 @@ RSS: false
 zhihu_username:     lulongji
 github_username:    lulongji
 facebook_username:  baiying.qiu.7
-jianshu_username:   e71990ada2fd
+#jianshu_username:   e71990ada2fd
 #twitter_username:   lulongji
 
 
@@ -93,10 +93,7 @@ service-worker: true
 
 # Friends
 friends: [
-    {
-        title: "WY",
-        href: "http://zhengwuyang.com"
-    },{
+   {
         title: "简书·LULONGJI",
         href: "http://www.jianshu.com/u/e71990ada2fd"
     },{
