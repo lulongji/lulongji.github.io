@@ -65,7 +65,7 @@ yaml 头文件长这样:
 layout:     post
 title:      如何搭建个人博客
 subtitle:   利用github pages + hexo 搭建个人博客
-date:       2017-10-11
+date:       2015-10-11
 author:     LULONGJI
 header-img: img/post-bg-blog.png
 catalog: true
