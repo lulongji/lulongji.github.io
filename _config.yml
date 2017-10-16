@@ -94,10 +94,16 @@ service-worker: true
 # Friends
 friends: [
    {
-        title: "Apple",
-        href: "https://apple.com"
+        title: "Spring",
+        href: "http://spring.io/"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "Oracle",
+        href: "www.oracle.com/"
+    },{
+        title: "码云",
+        href: "https://gitee.com/"
+    },{
+        title: "metogefun",
+        href: "https://metogefun.github.io/"
     }
 ]
