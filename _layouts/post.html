@@ -89,12 +89,11 @@ layout: default
                 <!-- 多说 Share end-->
                 {% endif %}
 
-
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
-                        Previous<br>
+                        上一页<br>
                         <span>{{page.previous.title}}</span>
                         </a>
                     </li>
@@ -102,13 +101,16 @@ layout: default
                     {% if page.next.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
-                        Next<br>
+                        下一页<br>
                         <span>{{page.next.title}}</span>
                         </a>
                     </li>
                     {% endif %}
                 </ul>
 
+                {% if site.gitment_username %}
+                    <div id="containers"></div>
+                {% endif %}
 
                 {% if site.duoshuo_username %}
                 <!-- 多说评论框 start -->
@@ -207,6 +209,24 @@ layout: default
 </script>
 <!-- 多说公共JS代码 end -->
 {% endif %}
+
+
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+{% if site.gitment_username %}
+<script>
+var gitment = new Gitment({
+  id: '{{% site.gitment_id %}}', // 可选。默认为 location.href
+  owner: '{{% site.gitment_id %}}',
+  repo: '{{% site.gitment_repo %}}',
+  oauth: {
+    client_id: '{{% site.gitment_client_id %}}',
+    client_secret: '{{% site.gitment_client_secret %}}',
+  },
+})
+gitment.render('containers')
+</script>
+{% endif %}
+
 
 
 {% if site.disqus_username %}

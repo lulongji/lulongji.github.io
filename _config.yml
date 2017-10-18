@@ -56,7 +56,13 @@ kramdown:
 
 # 评论系统
 # Disqus settings（https://disqus.com/）
-disqus_username: lulongji
+#disqus_username: lulongji
+
+gitment_username : lulongji
+gitment_id : lulongji
+gitment_repo : lulongji.github.io
+gitment_client_id : 37d96f3885b1ebea7e1d
+gitment_client_secret : 1d744823825939eda3beb9360bb46ed4010b8eb6
 
 # 多说 将于2017年6月1日正式关停服务，建议使用 Disqus（http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241）
 # Duoshuo settings
