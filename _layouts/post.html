@@ -214,12 +214,12 @@ layout: default
 {% if site.gitment_username %}
 <script>
 var gitment = new Gitment({
-  id: '{{% site.gitment_username %}}', // 可选。默认为 location.href
-  owner: '{{% site.gitment_id %}}',
-  repo: '{{% site.gitment_repo %}}',
+  id: '{{page.id}}', // 可选。默认为 location.href
+  owner: '{{site.gitment_id }}',
+  repo: '{{site.gitment_repo}}',
   oauth: {
-    client_id: '{{% site.gitment_client_id %}}',
-    client_secret: '{{% site.gitment_client_secret %}}',
+    client_id: '{{site.gitment_client_id }}',
+    client_secret: '{{site.gitment_client_secret }}',
   },
 })
 gitment.render('gitment_containers')
