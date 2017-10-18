@@ -109,7 +109,7 @@ layout: default
                 </ul>
 
                 {% if site.gitment_username %}
-                    <div id="containers"></div>
+                    <div id="gitment_containers"></div>
                 {% endif %}
 
                 {% if site.duoshuo_username %}
@@ -222,7 +222,7 @@ var gitment = new Gitment({
     client_secret: '{{% site.gitment_client_secret %}}',
   },
 })
-gitment.render('containers')
+gitment.render('gitment_containers')
 </script>
 {% endif %}
 
