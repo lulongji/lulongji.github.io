@@ -39,7 +39,9 @@ tags:
     export CLASSPATH=$JAVA_HOME/lib/:$JAVA_HOME/lib/jer/lib:$CLASSPATH
     export PATH=${JAVA_HOME}/bin:$PATH
 ```
-# 查看安装
+# 执行生效
+    source /etc/profile
 
+# 查看安装
     java -version
 
