@@ -109,7 +109,17 @@ friends: [
         title: "码云",
         href: "https://gitee.com/"
     },{
+        title: "GitHub",
+        href: "https://github.com/"
+    },{
+        title: "Hessian",
+        href: "http://hessian.caucho.com/"
+    },{
+        title: "Dubbo",
+        href: "http://dubbo.apache.org/"
+    },{
         title: "metogefun",
         href: "https://metogefun.github.io/"
     }
+    
 ]
