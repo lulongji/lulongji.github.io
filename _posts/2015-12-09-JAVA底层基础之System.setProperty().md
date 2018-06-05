@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      JAVA底层基础总结
-subtitle:   
+title:      JAVA底层基础之System.setProperty()
+subtitle:   JAVA底层基础之System.setProperty()
 date:       2015-12-09
 author:     lulongji
 header-img: img/post-bg-hacker.jpg

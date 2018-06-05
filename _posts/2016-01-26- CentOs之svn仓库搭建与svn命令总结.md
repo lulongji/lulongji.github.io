@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      svn仓库搭建与svn命令
-subtitle:   
+title:      CentOs之svn仓库搭建与svn命令总结
+subtitle:   CentOs之svn仓库搭建与svn命令总结
 date:       2016-01-26
 author:     Lulongji
 header-img: img/post-bg-hacker.jpg
@@ -13,7 +13,7 @@ tags:
 ---
 
 # 介绍
-公司买了一台刀片机，我来搭建的内网环境，以下是svn仓库的搭建过程，记录一下。
+    以下是svn仓库的搭建过程，记录一下。
 
 ### 开始
     yum安装方式

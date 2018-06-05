@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Redis搭建
-subtitle:   
+title:      CentOs之Redis搭建
+subtitle:   CentOs之Redis搭建
 date:       2016-06-19
 author:     lulongji
 header-img: img/post-bg-2015.jpg
