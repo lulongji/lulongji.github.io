@@ -62,18 +62,20 @@ tags:
 
 编辑完后保存，执行以下命令使其生效.
 
-    编辑完后保存，执行以下命令使其生效
+    sysctl -p
 
 # 修改用户资源
 
     vim /etc/security/limits.conf
 
 配置文件的最下方加入以下参数:
+
     oracle              soft    nproc  2047
     oracle              hard    nproc  16384
     oracle              soft    nofile  1024
     oracle              hard    nofile  65536
     oracle              soft    stack   10240
+
 
     vim /etc/pam.d/login
 在配置文件中加入:
@@ -82,31 +84,38 @@ tags:
     session required pam_limits.so
 
 # 创建安装目录并授权
+
     mkdir -p /usr/local/oracle /usr/local/oraInventory /usr/local/oradata/
     chown -R oracle:oinstall /usr/local/oracle /usr/local/oraInventory /usr/local/oradata/
     chmod -R 775 /usr/local/oracle /usr/local/oraInventory /usr/local/oradata/
 
 # 编辑oraInst.loc文件
+
     vim /etc/oraInst.loc
 
 在文件中加入下面的内容：
+
     inventory_loc=/usr/local/oraInventory
     inst_group=oinstall
 
 执行如下命令授权：
-    chown oracle:oinstall /etc/oraInst.loc
-　　 chmod 664 /etc/oraInst.loc
 
-# 准备oracle安装应答模板文件db_install.rsp文件
+    chown oracle:oinstall /etc/oraInst.loc
+    hmod 664 /etc/oraInst.loc
+
+# db_install.rsp文件
 该文件默认保存在```database/response```下，把response下的所有文件都拷贝到```/usr/local/oracle```文件夹下
-命令：
+
     cp /home/database/response/* /usr/local/oracle/
 修改安装所需的所有应答文件的所属组及权限
+
     chown  oracle:oinstall /usr/local/oracle/*.rsp
     chmod 755 /usr/local/oracle/*.rsp
 配置```db_install.rsp```文件
+
     vim /usr/local/oracle/db_install.rsp
 文件内修改相应的参数配置如下：
+
     oracle.install.option=INSTALL_DB_SWONLY     　//安装类型,只装数据库软件
     ORACLE_HOSTNAME=serv2.lin.vm.ncu        //主机名称（在命令行输入hostname查询）
     UNIX_GROUP_NAME=oinstall           　　　　// 安装组
@@ -128,16 +137,20 @@ tags:
 
 # 设置Oracle的用户环境
 由root切换至创建好的oracle用户
+
     su – oracle
 修改该用户的用户配置文件，该文件就在~目录下，可以先执行cd 或者cd ~
+
 　　vim .bash_profile
 文件内加入并修改至以下内容
+
     export ORACLE_BASE=/usr/local/oracle
     export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/db_1
     export ORACLE_SID=orcl   
     export ORACLE_OWNER=oracle
     export PATH=$PATH:$ORACLE_HOME/bin:$HOME/bin
 保存退出后执行source命令立即生效。
+
     source .bash_profile
 
 # 在Oracle用户下开始安装
