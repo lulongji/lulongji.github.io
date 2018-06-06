@@ -14,7 +14,7 @@ tags:
 # 开始
 以下是oracle11g 安装。
 
-# 硬件要求：
+# 硬件要求
 - 物理内存：最少1GB
 - 交互空间：物理内存为1GB至2GB之间时，交互空间为物理内存的1.5倍；物理内存为2GB至8GB之间时，交互空间为物理内存的1倍；物理内存为8GB以上时，交互空间为物理内存的0.75倍。
 - 磁盘空间：企业版4.35GB；标准版3.22GB；自定义（最大值）：3.45GB
@@ -139,9 +139,11 @@ tags:
 由root切换至创建好的oracle用户
 
     su – oracle
+
 修改该用户的用户配置文件，该文件就在~目录下，可以先执行cd 或者cd ~
 
 　　vim .bash_profile
+
 文件内加入并修改至以下内容
 
     export ORACLE_BASE=/usr/local/oracle
@@ -149,6 +151,7 @@ tags:
     export ORACLE_SID=orcl   
     export ORACLE_OWNER=oracle
     export PATH=$PATH:$ORACLE_HOME/bin:$HOME/bin
+
 保存退出后执行source命令立即生效。
 
     source .bash_profile
@@ -156,20 +159,22 @@ tags:
 # 在Oracle用户下开始安装
 
     /home/oracle/database/./runInstaller -silent -force -ignorePrereq -responseFile /usr/local/oracle/db_install.rsp
+
 参数说明：
-``` 
-　　/home/database 是安装包解压后的路径，此处根据安装包解压所在位置做修改，因人而异。
-　　runInstaller 是主要安装脚本
-　　-silent 静默模式
-　　-force 强制安装
-　　-ignorePrereq忽略warning直接安装。
-　　-responseFile读取安装应答文件。
-```
+
+    　　/home/database 是安装包解压后的路径，此处根据安装包解压所在位置做修改，因人而异。
+    　　runInstaller 是主要安装脚本
+    　　-silent 静默模式
+    　　-force 强制安装
+    　　-ignorePrereq忽略warning直接安装。
+    　　-responseFile读取安装应答文件。
+
 # 运行脚本
 
 执行完安装指令后，在原来那个窗口（1号窗口）可以什么事情都不做，重开一个命令行窗口（2号窗口），以root身份登录到服务器。
-在2号窗口进入/usr/local/oracle/product/11.2.0/db_1目录，可以看到安装数据库已经装在这个目录下了，并且有一个root.sh文件在这个目录下。
-这个时候等1号窗口出现以下提示，安装编译需要一定的时间，请耐心等待。
+在2号窗口进入```/usr/local/oracle/product/11.2.0/db_1```目录，可以看到安装数据库已经装在这个目录下了，并且有一个root.sh文件在这个目录下。这个时候等1号窗口出现以下提示，安装编译需要一定的时间，请耐心等待。
+
+```
 #-------------------------------------------------------------------
 　　/usr/oracle/oraInventory/orainstRoot.sh（这一句可能没有。。具体原因我也不清楚，不影响安装，如果有这一句，也要运行这个orainstRoot.sh脚本）
 　　/usr/oracle/product/11.2.0/db_1/root.sh
@@ -186,8 +191,11 @@ tags:
  
  　　Successfully Setup Software.
 #------------------
+```
 出现以上界面后，到2号窗口运行root.sh脚本
+
     ./root.sh
+    
 数据库安装过程到这里结束，下面是配置。
 
 
