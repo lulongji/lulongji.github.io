@@ -65,7 +65,6 @@ tags:
     sysctl -p
 
 # 修改用户资源
-
     vim /etc/security/limits.conf
 
 配置文件的最下方加入以下参数:
@@ -84,13 +83,11 @@ tags:
     session required pam_limits.so
 
 # 创建安装目录并授权
-
     mkdir -p /usr/local/oracle /usr/local/oraInventory /usr/local/oradata/
     chown -R oracle:oinstall /usr/local/oracle /usr/local/oraInventory /usr/local/oradata/
     chmod -R 775 /usr/local/oracle /usr/local/oraInventory /usr/local/oradata/
 
 # 编辑oraInst.loc文件
-
     vim /etc/oraInst.loc
 
 在文件中加入下面的内容：
@@ -157,7 +154,6 @@ tags:
     source .bash_profile
 
 # 在Oracle用户下开始安装
-
     /home/oracle/database/./runInstaller -silent -force -ignorePrereq -responseFile /usr/local/oracle/db_install.rsp
 
 参数说明：
@@ -170,7 +166,6 @@ tags:
     　　-responseFile读取安装应答文件。
 
 # 运行脚本
-
 执行完安装指令后，在原来那个窗口（1号窗口）可以什么事情都不做，重开一个命令行窗口（2号窗口），以root身份登录到服务器。
 在2号窗口进入```/usr/local/oracle/product/11.2.0/db_1```目录，可以看到安装数据库已经装在这个目录下了，并且有一个root.sh文件在这个目录下。这个时候等1号窗口出现以下提示，安装编译需要一定的时间，请耐心等待。
 
