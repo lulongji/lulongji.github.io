@@ -190,13 +190,79 @@ tags:
 　　4. Return to this window and hit"Enter" key to continue
  
  　　Successfully Setup Software.
-#------------------
+#-------------------------------------------------------------------
 ```
 出现以上界面后，到2号窗口运行root.sh脚本
 
     ./root.sh
-    
+
 数据库安装过程到这里结束，下面是配置。
+
+# 数据库的配置和创建
+创建数据库，这儿切换成root用户,进入```/usr/local/oracle```目录，编辑dbca.rsp创建数据库应答文件：
+
+    vim dbca.rsp
+
+修改几个参数，如果这几个参数被注释了，要取消注释（这个文件一定要修改，否则会造成数据库创建后无法挂载）
+
+    GDBNAME = “orcl”
+    SID = “orcl”
+    CHARACTERSET = “ZHS16GBK”
+    NATIONALCHARACTERSET= “AL16UTF16”
+    SOURCEDB = “serv2.lin.vm.ncu:1521:orcl”
+
+保存退出后，执行dbca指令创建数据库：
+
+    dbca -silent -responseFile dbca.rsp
+
+到这的时候，会提示输入sys口令，输入oracle，千万不要回车，然后等待，直到出现以下界面
+```
+…………………………
+Copying database files
+1% complete
+3% complete
+11% complete
+18% complete
+26% complete
+37% complete
+Creating and starting Oracle instance
+40% complete
+…………………………
+```
+ 
+执行到100%后，数据库创建完成
+
+
+# 开启数据库网络监听
+还在刚才的目录下，有一个netca.rsp文件,执行以下命令
+
+    netca -silent -responseFile netca.rsp
+
+开启监听
+
+    lsnrctl start
+    dbstart $ORACLE_HOME
+
+
+# 基本命令
+解锁的命令
+
+    alter user system account unlock;
+
+修改密码
+
+    alter user system identified by 123456;
+
+创建用户
+
+    create  user test identified by test;
+
+给用户授权
+
+    grant connect,resource to test;
+
+
+
 
 
 
