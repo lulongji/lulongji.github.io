@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      CentOs之Jdk环境搭建
-subtitle:   CentOs之Jdk环境搭建
+subtitle:   Jdk环境搭建
 date:       2016-01-26
 author:     Lulongji
 header-img: img/post-bg-hacker.jpg

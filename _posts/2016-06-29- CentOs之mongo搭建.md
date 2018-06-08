@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      CentOs之mongodb搭建
-subtitle:   CentOs之mongodb搭建
+subtitle:   mongodb搭建
 date:       2016-06-29
 author:     lulongji
 header-img: img/post-bg-2015.jpg

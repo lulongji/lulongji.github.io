@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      SpringBoot搭建系列一
-subtitle:   
+subtitle:   SpringBoot
 date:       2018-04-30
 author:     lulongji
 header-img: img/post-bg-hacker.jpg

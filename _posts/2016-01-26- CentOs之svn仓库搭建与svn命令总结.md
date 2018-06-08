@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      CentOs之svn仓库搭建与svn命令总结
-subtitle:   CentOs之svn仓库搭建与svn命令总结
+subtitle:   svn仓库搭建与svn命令总结
 date:       2016-01-26
 author:     Lulongji
 header-img: img/post-bg-hacker.jpg
