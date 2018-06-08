@@ -127,3 +127,15 @@ host是该zk进程所在的IP地址，port1表示follower和leader交换消息�
 
     WatchedEvent state:SyncConnected type:None path:null
     [zk: 192.168.229.160:2181,192.168.229.161:2181,192.168.229.162:2181(CONNECTED) 0] 
+
+
+# 环境变量
+
+    export ZOOKEEPER_HOME=/usr/local/zookeeper 
+    export PATH=$PATH:$ZOOKEEPER_HOME/bin
+
+# 查看当前状态
+    ./zkServer.sh status
+
+
+    
