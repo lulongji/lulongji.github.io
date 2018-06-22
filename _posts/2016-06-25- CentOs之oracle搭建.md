@@ -21,7 +21,7 @@ tags:
 
 # 检查内存情况
     grep MemTotal /proc/meminfo
-    grep MemTotal /proc/meminfo
+    grep SwapTotal /proc/meminfo
 
 # 到官网下载安装包
 ``` linux.x64_11gR2_database_1of2.zip ```
@@ -98,7 +98,7 @@ tags:
 执行如下命令授权：
 
     chown oracle:oinstall /etc/oraInst.loc
-    hmod 664 /etc/oraInst.loc
+    chmod 664 /etc/oraInst.loc
 
 # db_install.rsp文件
 该文件默认保存在```database/response```下，把response下的所有文件都拷贝到```/usr/local/oracle```文件夹下
@@ -154,7 +154,8 @@ tags:
     source .bash_profile
 
 # 在Oracle用户下开始安装
-    /home/oracle/database/./runInstaller -silent -force -ignorePrereq -responseFile /usr/local/oracle/db_install.rsp
+    cd /home/database/   
+    ./runInstaller -silent -force -ignorePrereq -responseFile  /usr/local/oracle/db_install.rsp
 
 参数说明：
 
@@ -240,6 +241,14 @@ Creating and starting Oracle instance
 
 
 # 基本命令
+sqlplus  /  as  sysdba
+
+启动数据库
+    startup
+
+停止数据库
+    shutdown immediate
+    
 解锁的命令
 
     alter user system account unlock;
@@ -255,6 +264,11 @@ Creating and starting Oracle instance
 给用户授权
 
     grant connect,resource to test;
+
+
+
+
+    
 
 
 
