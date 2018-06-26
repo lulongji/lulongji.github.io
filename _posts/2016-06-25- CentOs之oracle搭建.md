@@ -260,6 +260,7 @@ sqlplus  /  as  sysdba
 创建用户
 
     create  user test identified by test;
+  
 
 给用户授权
 
