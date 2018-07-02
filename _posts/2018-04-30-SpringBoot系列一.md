@@ -29,15 +29,31 @@ tags:
 - 如你所见，项目里面基本没有代码，除了几个空目录外，还包含如下几样东西。
 ```
     pom.xml：Maven构建说明文件。
-    LljSpringbootChapter1Application.java：一个带有main()方法的类，用于启动应用程序（关键）。
-    LljSpringbootChapter1ApplicationTests.java：一个空的Junit测试类，它加载了一个使用Spring Boot字典配置功能的Spring应用程序上下文。
+    DemoApplication.java：一个带有main()方法的类，用于启动应用程序（关键）。
+    DemoApplicationTests.java：一个空的Junit测试类，它加载了一个使用Spring Boot字典配置功能的Spring应用程序上下文。
     application.properties：一个空的properties文件，你可以根据需要添加配置属性。
 
 ```
 
-# 构建
+# 构建项目
+创建TestController类，添加如下代码。
 
-    @RequestMapping("/")
-    public String index() {
-        return "Hello world";
+
+    @RestController
+    @EnableAutoConfiguration
+    public class TestController {
+
+        @RequestMapping("/")
+        public String test() {
+            return "Hello world";
+        }
     }
+
+# 启动程序
+在DemoApplication.java 文件点击右键运行main方法，之后运行http://localhost:8080/就会看到 ```Hello world```了。
+
+- 注意一点：DemoApplication这个启动类必须放在最外层，要不会抱一个错误```Whitelabel Error Page```,详细解释也可以看官网```http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#using-boot-structuring-your-code```
+
+
+# 项目代码
+
