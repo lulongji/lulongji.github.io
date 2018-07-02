@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringBoot搭建系列一
+title:      SpringBoot搭建系列一之初始环境搭建
 subtitle:   SpringBoot
 date:       2018-04-30
 author:     lulongji
@@ -56,4 +56,4 @@ tags:
 
 
 # 项目代码
-
+```https://github.com/lulongji/springboot-demo.git```
