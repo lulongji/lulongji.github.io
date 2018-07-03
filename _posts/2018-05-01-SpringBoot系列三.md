@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      SpringBoot搭建系列三
-subtitle:   日志搭建
+subtitle:   logback日志搭建
 date:       2018-05-01
 author:     lulongji
 header-img: img/post-bg-hacker.jpg

@@ -18,6 +18,7 @@ tags:
 mvc的设计模式依旧是日常开发中上使用最多的一种设计模式，所以今天我们还是用这种模式设计。
 
 - domain层：模型层，实体类。
+- api层：对外接口。
 - service层：业务层。
 - dao层：持久层。
 - Controller层：视图层。
@@ -25,7 +26,7 @@ mvc的设计模式依旧是日常开发中上使用最多的一种设计模式�
 
 ### 框架接口代码整合
 基础增删改查代码请到github查看。
-
+```https://github.com/lulongji/springboot-demo.git```
 ### 框架配置
 
     #默认使用配置
