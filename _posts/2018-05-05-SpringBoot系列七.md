@@ -53,6 +53,7 @@ spring事物的处理之前有总结过[spring事物处理](http://blog.lulongji
         REPEATABLE_READ(4),
         SERIALIZABLE(8);
     }
+
 - DEFAULT ：这是默认值，表示使用底层数据库的默认隔离级别。对大部分数据库而言，通常这值就是： READ_COMMITTED 。
 - READ_UNCOMMITTED ：该隔离级别表示一个事务可以读取另一个事务修改但还没有提交的数据。该级别不能防止脏读和不可重复读，因此很少使用该隔离级别。
 - READ_COMMITTED ：该隔离级别表示一个事务只能读取另一个事务已经提交的数据。该级别可以防止脏读，这也是大多数情况下的推荐值。
@@ -71,6 +72,7 @@ spring事物的处理之前有总结过[spring事物处理](http://blog.lulongji
         NEVER(5),
         NESTED(6);
     }
+    
 - REQUIRED ：如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新的事务。
 - SUPPORTS ：如果当前存在事务，则加入该事务；如果当前没有事务，则以非事务的方式继续运行。
 - MANDATORY ：如果当前存在事务，则加入该事务；如果当前没有事务，则抛出异常。
