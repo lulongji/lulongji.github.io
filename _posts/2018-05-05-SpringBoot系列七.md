@@ -11,7 +11,7 @@ tags:
     - Spring
 ---
 # 说明
-spring事物的处理之前有总结过![spring事物处理](http://blog.lulongji.cn/2015/11/26/%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8Bspring%E4%BA%8B%E7%89%A9%E5%A4%84%E7%90%86/),不过之前用到的是tx模式，这次打算用注解方式，所以总结一下注解方式的规则。
+spring事物的处理之前有总结过[spring事物处理](http://blog.lulongji.cn/2015/11/26/%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8Bspring%E4%BA%8B%E7%89%A9%E5%A4%84%E7%90%86/),不过之前用到的是tx模式，这次打算用注解方式，所以总结一下注解方式的规则。
 
 事务具备ACID四种特性，ACID是Atomic（原子性）、Consistency（一致性）、Isolation（隔离性）和Durability（持久性）的英文缩写。
 
