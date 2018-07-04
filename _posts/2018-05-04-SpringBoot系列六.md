@@ -24,6 +24,32 @@ spring boot 默认映射的文件夹有：
 
 上面这几个都是静态资源的映射路径，优先级顺序为：META-INF/resources > resources > static > public，我们可以通过修改spring.mvc.static-path-pattern来修改默认的映射**
 
+### 静态资源过滤
+
+- 代码形式
+
+        @Configuration
+        public class DemoSpringConfig extends WebMvcConfigurationSupport {
+
+            /**
+            * 静态资源处理
+            **/
+            @Override
+            public void addResourceHandlers(ResourceHandlerRegistry registry) {
+                //将所有/static/** 访问都映射到classpath:/static/ 目录下
+                registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+            }
+        }
+
+- 配置文件形式
+在yml里添加：
+spring：
+    mvc:
+        #静态资源过滤
+        static-path-pattern: /static/**
+
+```注意：通过spring.mvc.static-path-pattern这种方式配置，会使Spring Boot的默认配置失效，也就是说，/public /resources 等默认配置不能使用。```
+
 # MDC
 先看一下什么是MDC（Mapped Diagnostic Context，用于打LOG时跟踪一个“会话“、一个”事务“）。举例，有一个web controller，在同一时间可能收到来自多个客户端的请求，如果一个请求发生了错误，我们要跟踪这个请求从controller开始一步步都执行到了哪些代码、有哪些log的输出。这时我们可以看log文件，但是log文件是多个请求同时记录的，基本无法分辨哪行是哪个请求产生的，虽然我们可以看线程，但线程可能被复用，也是很难分辨出，这时MDC就派上用场了。
 

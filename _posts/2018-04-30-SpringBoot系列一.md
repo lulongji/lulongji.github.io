@@ -50,7 +50,7 @@ tags:
     }
 
 # 启动程序
-在DemoApplication.java 文件点击右键运行main方法，之后运行http://localhost:8080/就会看到 ```Hello world```了。
+在DemoApplication.java 文件点击右键运行main方法(也可以另外一种启动方式：```mvn spring-boot:run -Dspring.profiles.active=dev```)，之后运行http://localhost:8080/就会看到 ```Hello world```了。
 
 - 注意一点：DemoApplication这个启动类必须放在最外层，要不会抱一个错误```Whitelabel Error Page```,详细解释也可以看官网```http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#using-boot-structuring-your-code```
 
