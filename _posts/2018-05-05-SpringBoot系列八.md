@@ -61,11 +61,11 @@ tags:
 
 - TestController
 
-    @RequestMapping("/test1")
-    public String test1(Map<String, Object> map) {
-        map.put("nameKey", path);
-        return "test";
-    }
+        @RequestMapping("/test1")
+        public String test1(Map<String, Object> map) {
+            map.put("nameKey", path);
+            return "test";
+        }
 
 
 - 启动程序访问即可
