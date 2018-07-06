@@ -15,7 +15,62 @@ tags:
 
 # Freemaker模板引擎
 
+### 引入pom依赖
 
+    <!-- 引入freeMarker的依赖包. -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-freemarker</artifactId>
+    </dependency>    
+
+### 配置application.yml
+
+    spring:
+    freemarker:
+        allow-request-override: false
+        cache: false
+        settings:
+        template_update_delay: 0
+        check-template-location: true
+        charset: UTF-8
+        content-type: text/html
+        expose-request-attributes: false
+        expose-session-attributes: false
+        expose-spring-macro-helpers: false
+        templateEncoding: UTF-8
+        templateLoaderPath: classpath:/templates/
+        prefix:
+        suffix: .html
+
+### 测试
+
+- 在templates新建test.html：
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Insert title here</title>
+    </head>
+    <body>
+        Hello,${nameKey}
+    </body>
+
+    </html>
+
+
+- TestController
+
+    @RequestMapping("/test1")
+    public String test1(Map<String, Object> map) {
+        map.put("nameKey", path);
+        return "test";
+    }
+
+
+- 启动程序访问即可
+
+```http://localhost:8080/test1```
 
 
 # 热部署
