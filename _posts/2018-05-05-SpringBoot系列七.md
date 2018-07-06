@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      SpringBoot搭建系列七
-subtitle:   事物处理
+subtitle:   事务处理
 date:       2018-05-05
 author:     lulongji
 header-img: img/post-bg-hacker.jpg
@@ -11,7 +11,7 @@ tags:
     - Spring
 ---
 # 说明
-spring事物的处理之前有总结过[spring事物处理](http://blog.lulongji.cn/2015/11/26/%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8Bspring%E4%BA%8B%E7%89%A9%E5%A4%84%E7%90%86/),不过之前用到的是tx模式，这次打算用注解方式，所以总结一下注解方式的规则。
+spring事务的处理之前有总结过[spring事务处理](http://blog.lulongji.cn/2015/11/26/%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8Bspring%E4%BA%8B%E7%89%A9%E5%A4%84%E7%90%86/),不过之前用到的是tx模式，这次打算用注解方式，所以总结一下注解方式的规则。
 
 事务具备ACID四种特性，ACID是Atomic（原子性）、Consistency（一致性）、Isolation（隔离性）和Durability（持久性）的英文缩写。
 
@@ -40,7 +40,7 @@ spring事物的处理之前有总结过[spring事物处理](http://blog.lulongji
 
 
 
-![springboot事物](https://raw.githubusercontent.com/lulongji/lulongji.github.io/master/imgs/springboot/sw.png)
+![springboot事务](https://raw.githubusercontent.com/lulongji/lulongji.github.io/master/imgs/springboot/sw.png)
     
 
 # 隔离级别
@@ -72,7 +72,7 @@ spring事物的处理之前有总结过[spring事物处理](http://blog.lulongji
         NEVER(5),
         NESTED(6);
     }
-    
+
 - REQUIRED ：如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新的事务。
 - SUPPORTS ：如果当前存在事务，则加入该事务；如果当前没有事务，则以非事务的方式继续运行。
 - MANDATORY ：如果当前存在事务，则加入该事务；如果当前没有事务，则抛出异常。
