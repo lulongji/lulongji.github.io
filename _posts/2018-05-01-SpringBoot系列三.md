@@ -116,5 +116,18 @@ SpringBoot 的日志文件放在resources目录下，在resources目录下新建
         </dependency>
 
 
+
+### 控制台颜色说明
+
+- 1.第一点，颜色%black %red等等 ，需要用括号将你要显示本颜色的子模块括起来
+
+- 2.第二点，%red颜色等，前面要与上一个模块 空格隔开
+
+- 3.同样可以定义一个变量然后直接引用在<pattern>标签中
+
+
+        <pattern>%black(控制台-) %red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{10}) - %cyan(%msg%n)</pattern>
+
+
 # 项目源码
 ```https://github.com/lulongji/springboot-demo.git```
