@@ -60,33 +60,34 @@ tags:
         nohup java -jar  demo-0.0.1-SNAPSHOT.jar  >> catalina.out  2>&1 &
 
         fi
-        
+
 
 - 部署脚本stop.sh
 
-    \#!/bin/bash
 
-    PROJECTNAME=demo
+        \#!/bin/bash
 
-    pid=`ps -ef |grep $PROJECTNAME |grep -v "grep" |awk '{print $2}' `
+        PROJECTNAME=demo
 
-    if [ $pid ]; then
+        pid=`ps -ef |grep $PROJECTNAME |grep -v "grep" |awk '{print $2}' `
 
-    ​    echo "$PROJECTNAME is  running  and pid=$pid"
+        if [ $pid ]; then
 
-    ​    kill -9 $pid
+        ​    echo "$PROJECTNAME is  running  and pid=$pid"
 
-    ​    if [[ $? -eq 0 ]];then
+        ​    kill -9 $pid
 
-    ​       echo "sucess to stop $PROJECTNAME "
+        ​    if [[ $? -eq 0 ]];then
 
-    ​    else
+        ​       echo "sucess to stop $PROJECTNAME "
 
-    ​       echo "fail to stop $PROJECTNAME "
+        ​    else
 
-    ​     fi
+        ​       echo "fail to stop $PROJECTNAME "
 
-    fi
+        ​     fi
+
+        fi
 
 
 
