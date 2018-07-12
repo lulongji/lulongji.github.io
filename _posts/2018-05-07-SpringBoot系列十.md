@@ -13,7 +13,7 @@ tags:
 
 # 项目部署
 
-- 修改pom文件，添加默认启动类。
+### 修改pom文件，添加默认启动类。
 
         <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
@@ -41,7 +41,7 @@ tags:
         </plugin>
 
 
-- 部署脚本start.sh
+### 部署脚本start.sh
 
         \#!/bin/bash
 
@@ -62,7 +62,7 @@ tags:
         fi
 
 
-- 部署脚本stop.sh
+### 部署脚本stop.sh
 
 
         \#!/bin/bash
