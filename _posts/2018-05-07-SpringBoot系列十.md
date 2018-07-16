@@ -90,6 +90,27 @@ tags:
         fi
 
 
+# 用户组管理
+
+    groupadd springboot
+    groupadd java
+    useradd -g springboot -G java
+    passwd java
+
+    #赋予root权限
+    usermod -g root java
+
+
+    #创建文件夹
+    mkdir -p /usr/local/springboot
+
+    #授权
+    chown -R java:springboot /usr/local/springboot
+
+    #软连
+    ln -s /webserver/springboot/ /usr/local/
+    
+
 
 # 项目源码
 ```https://github.com/lulongji/springboot-demo.git```
