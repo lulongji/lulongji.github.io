@@ -98,6 +98,18 @@ tags:
     setenforce 0
 
 
+# Navicat 远程连接mysql乱码
+
+Navicat里右击一个连接，选择连接属性，切换到高级选项卡，去掉“使用mysql字符集”前的对勾，在编码里选择utf-8，这种方法对于部分问题可能适合。如下图所示：
+
+![1](https://raw.githubusercontent.com/lulongji/lulongji.github.io/master/imgs/mysql/mysql1.png)
+
+
+或者：
+
+
+![1](https://raw.githubusercontent.com/lulongji/lulongji.github.io/master/imgs/mysql/mysql2.png)
+
 
 
 
