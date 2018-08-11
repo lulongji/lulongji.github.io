@@ -2,7 +2,7 @@
 layout:     post
 title:      CentOs之telnet命令
 subtitle:   telnet命令
-date:       2016-01-26
+date:       2016-01-10
 author:     Lulongji
 header-img: img/post-bg-hacker.jpg
 catalog: true
