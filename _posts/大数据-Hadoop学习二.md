@@ -20,3 +20,5 @@ create table test {user_id string comment '用户id',user_name String comment '�
 
 
 load data  locate inpath '路径'  onto table  test  可以把机器数据加载到表里边。
+
+
