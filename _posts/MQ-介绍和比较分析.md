@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      MQ系列研读之一
-subtitle:   MQ系列介绍和比较分析
+subtitle:   介绍和比较分析
 date:       2016-07-10
 author:     lulongji
 header-img: img/post-bg-hacker.jpg

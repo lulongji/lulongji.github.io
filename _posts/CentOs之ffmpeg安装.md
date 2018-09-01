@@ -16,30 +16,23 @@ tags:
 由于公司需要做微信和坐席IM通话处理语音，所以需要在centos服务器上安装ffmpeg，用来处理音频。
 
 # 下载
+ffmpeg下载链接：[http://ffmpeg.org/download.html](http://ffmpeg.org/download.html)
 
-到官网[http://ffmpeg.org/download.html](http://ffmpeg.org/download.html)下载最新的ffmpeg安装包.
+lame下载接：[https://sourceforge.net/projects/lame/files/lame/](https://sourceforge.net/projects/lame/files/lame/)
 
-# 解压
-
-    tar jxf ffmpeg-2.5.3.tar.bz2
 
 # 安装需求包
 
+### 安装lame
+    tar -zxf lame-3.100.tar.gz 
+    cd lame-3.100 
+    ./configure 
+    make && make install
+### 安装yasm
+
     yum install yasm
 
-# 安装 lame
-下载lame-3.100.tar.gz。
-
-    tar -zxf lame-3.100.tar.gz
-    cd lame-3.100
-    ./configure
-    make
-    make install
-
-
-
-
-# 编译
+# 编译ffmpeg
 
     ./configure --enable-shared --enable-libmp3lame  --prefix=/usr/local/ffmpeg
 
