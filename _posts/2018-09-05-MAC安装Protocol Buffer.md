@@ -7,7 +7,7 @@ author:     lulongji
 header-img: img/post-bg-hacker.jpg
 catalog: true
 tags:
-   - Mac
+   - mac
    - Protocol Buffer
 ---
 
@@ -35,6 +35,24 @@ tags:
 在什么场景下使用：
 
 ```如 即时IM （QQ、微信）的需求场景```
+
+- Protobuf 优点
+
+1. 比XML更简洁、高效
+
+2. 跨平台、跨语言
+
+3. 向下兼容、易升级
+
+4. 代码自动生成、不用手写
+
+- Protobuf 缺点
+
+1. 应用不够广
+
+2. 二进制格式导致可读性差
+
+3. 缺乏自描述
 
 
 # 安装
@@ -83,6 +101,12 @@ tags:
 
 # 使用
 
+
+    //生成Java类
+    protoc --java_out=./ JianshuUserMsg.proto
+
+
+``` 注意空格```
 
 
 
