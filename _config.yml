@@ -1,0 +1,125 @@
+# Site settings
+title: LULONGJI Blog  
+SEOTitle: 鲁龙基的博客 | LULONGJI Blog
+header-img: img/post-bg-rwd.jpg
+email: lulongji2011@163.com
+description: "鲁龙基的博客, lulongji, 鲁龙基,tomcat,java ,spring ,linux "
+keyword: "鲁龙基的博客, lulongji, 鲁龙基,tomcat,java ,spring ,linux "
+url: "http://lulongji.github.io"          # your host, for absolute URL
+baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/lulongji/lulongji.github.io.git" # you code repository
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "一开始什么都很容易，但坚持下来却很难，受尽所有苦难，方有你的王朝!"
+sidebar-avatar: /img/about-LULONGJI-gentle.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# SNS settings
+RSS: false
+# weibo_username:     lulongji
+zhihu_username:     ping-yong-ye-shi-cuo
+github_username:    lulongji
+#facebook_username: 
+#jianshu_username:   
+#twitter_username:   lulongji
+
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# 评论系统
+# Disqus settings（https://disqus.com/）
+#disqus_username: lulongji
+
+gitment_username : lulongji
+gitment_id : 8446572
+gitment_repo : lulongji.github.io
+gitment_client_id : 37d96f3885b1ebea7e1d
+gitment_client_secret : 1d744823825939eda3beb9360bb46ed4010b8eb6
+
+# 多说 将于2017年6月1日正式关停服务，建议使用 Disqus（http://dev.duoshuo.com/threads/58d1169ae293b89a20c57241）
+# Duoshuo settings
+# duoshuo_username: lulongji
+# Share component is depend on Comment so we can NOT use share only.
+# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: b91b6efc678be9f6b3863953cae325c6
+
+# Google Analytics
+ga_track_id: 'UA-107851854-1'            # Format: UA-xxxxxx-xx
+ga_domain: auto
+
+
+
+
+
+# Featured Tags
+featured-tags: true                     # 是否使用首页标签
+featured-condition-size: 0              # 相同标签数量大于这个数，才会出现在首页
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+   {
+        title: "Spring",
+        href: "http://spring.io/"
+    },{
+        title: "Oracle",
+        href: "www.oracle.com/"
+    },{
+        title: "码云",
+        href: "https://gitee.com/"
+    },{
+        title: "GitHub",
+        href: "https://github.com/"
+    },{
+        title: "Hessian",
+        href: "http://hessian.caucho.com/"
+    },{
+        title: "Dubbo",
+        href: "http://dubbo.apache.org/"
+    },{
+        title: "metogefun",
+        href: "https://metogefun.github.io/"
+    }
+    
+]
