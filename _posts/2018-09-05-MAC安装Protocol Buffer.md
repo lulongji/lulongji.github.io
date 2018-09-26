@@ -109,4 +109,14 @@ tags:
 ``` 注意空格```
 
 
+# 打赏
+
+### 微信
+
+![微信](https://raw.githubusercontent.com/lulongji/lulongji.github.io/master/imgs/fk/wx1.png)
+
+### 支付宝
+
+![支付宝](https://raw.githubusercontent.com/lulongji/lulongji.github.io/master/imgs/fk/zfb1.png)
+
 
