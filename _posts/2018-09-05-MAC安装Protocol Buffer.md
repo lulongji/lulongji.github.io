@@ -113,7 +113,7 @@ tags:
 
 ### 微信
 
-![微信](https://raw.githubusercontent.com/lulongji/lulongji.github.io/master/imgs/fk/wx1.png)
+![微信](https://hys-parent.oss-cn-beijing.aliyuncs.com/test/zfb1.png?x-oss-process=style/test)
 
 ### 支付宝
 
