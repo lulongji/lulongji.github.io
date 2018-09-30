@@ -35,6 +35,17 @@ Centos7更新yum源。
     rm -f  /var/run/yum.pid
 
 
+# 打赏
+
+###### 微信
+
+![微信](https://hys-parent.oss-cn-beijing.aliyuncs.com/test/wx1.png?x-oss-process=style/test)
+
+###### 支付宝
+
+![支付宝](https://hys-parent.oss-cn-beijing.aliyuncs.com/test/zfb1.png?x-oss-process=style/test)
+
+
 
 
 
