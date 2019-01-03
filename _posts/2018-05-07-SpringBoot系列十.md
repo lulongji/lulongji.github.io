@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      SpringBoot搭建系列十
-subtitle:   CentOS 部署
+subtitle:   CentOS 部署 
 date:       2018-05-07
 author:     lulongji
 header-img: img/post-bg-hacker.jpg
@@ -13,81 +13,79 @@ tags:
 
 # 项目部署
 
-### 修改pom文件，添加默认启动类。
+### 部署脚本
 
-        <plugin>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <version>2.2-beta-5</version>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <addClasspath>true</addClasspath>
-                        <mainClass>com.example.demo.DemoApplication.Main</mainClass>
-                    </manifest>
-                </archive>
-                <descriptorRefs>
-                    <descriptorRef>jar-with-dependencies</descriptorRef>
-                </descriptorRefs>
-            </configuration>
-            <executions>
-                <execution>
-                    <id>assemble-all</id>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>single</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
+    #!/bin/bash
 
+    #JDK指定
+    JAVA_HOME=$JAVA_HOME
+    #项目目录
+    APP_HOME="/app/springboot_wxrest"
+    #项目jar名称
+    APP_NAME=wxrest
+    #项目配置文件路径
+    APP_CONF="$APP_HOME/conf/application-pro.properties"
+    #关闭debug模式则设置为空
+    #APP_DEBUGE=
+    APP_DEBUGE="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8899"
 
-### 部署脚本start.sh
+    #JVM参数
+    JAVA_OPTS='-Xms2048M -Xmx2048M -XX:PermSize=256M -XX:MaxPermSize=512M -XX:NewRatio=4 -XX:+UseParallelGC -XX:ParallelGCThreads=8 -XX:+UseAdaptiveSizePolicy -verbose:gc -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:-HeapDumpOnOutOfMemoryError -Xloggc:verbose-gc-sp.txt'
+    JAR_FILE=$APP_HOME/$APP_NAME.jar
+    pid=0
+    APP_CONF="--spring.config.location=file:$APP_CONF  --spring.profiles.active=pro"
 
-        \#!/bin/bash
+    start(){
+    checkpid
+    if [ ! -n "$pid" ]; then
+        $JAVA_HOME/bin/java -jar $APP_DEBUGE $JVM_OPTS $JAR_FILE $APP_CONF  &
+        echo "---------------------------------"
+        echo "启动完成，按CTRL+C退出日志界面即可>>>>>"
+        echo "---------------------------------"
+        sleep 2s
+    else
+        echo "$APP_NAME is runing PID: $pid"
+    fi
 
-        PROJECTNAME=demo
+    }
 
-        pid=`ps -ef |grep $PROJECTNAME |grep -v "grep" |awk '{print $2}'`
+    status(){
+    checkpid
+    if [ ! -n "$pid" ]; then
+        echo "$APP_NAME not runing"
+    else
+        echo "$APP_NAME runing PID: $pid"
+    fi
+    }
 
-        if [ $pid ]; then
+    checkpid(){
+        pid=`ps -ef |grep $JAR_FILE |grep -v grep |awk '{print $2}'`
+    }
 
-        ​    echo "$PROJECTNAME  is  running  and pid=$pid"
-
+    stop(){
+        checkpid
+        if [ ! -n "$pid" ]; then
+        echo "$APP_NAME not runing"
         else
-
-        echo "Start success to start $PROJECTNAME ...."
-
-        nohup java -jar  demo-0.0.1-SNAPSHOT.jar  >> catalina.out  2>&1 &
-
+        echo "$APP_NAME stop..."
+        kill -9 $pid
         fi
+    }
 
+    restart(){
+        stop
+        sleep 1s
+        start
+    }
 
-### 部署脚本stop.sh
+    case $1 in
+            start) start;;
+            stop)  stop;;
+            restart)  restart;;
+            status)  status;;
+                *)  echo "require start|stop|restart|status"  ;;
+    esac
 
-
-        \#!/bin/bash
-
-        PROJECTNAME=demo
-
-        pid=`ps -ef |grep $PROJECTNAME |grep -v "grep" |awk '{print $2}' `
-
-        if [ $pid ]; then
-
-        ​    echo "$PROJECTNAME is  running  and pid=$pid"
-
-        ​    kill -9 $pid
-
-        ​    if [[ $? -eq 0 ]];then
-
-        ​       echo "sucess to stop $PROJECTNAME "
-
-        ​    else
-
-        ​       echo "fail to stop $PROJECTNAME "
-
-        ​     fi
-
-        fi
 
 
 # 用户组管理
