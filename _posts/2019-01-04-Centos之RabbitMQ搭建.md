@@ -33,6 +33,27 @@ tags:
     service rabbitmq-server stop
     rabbitmqctl status  # 查看状态
 
+    # 查看当前所有用户
+    $ sudo rabbitmqctl list_users
+    
+    # 查看默认guest用户的权限
+    $ sudo rabbitmqctl list_user_permissions guest
+    
+    # 由于RabbitMQ默认的账号用户名和密码都是guest。为了安全起见, 先删掉默认用户
+    $ sudo rabbitmqctl delete_user guest
+    
+    # 添加新用户
+    $ sudo rabbitmqctl add_user username password
+    
+    # 设置用户tag
+    $ sudo rabbitmqctl set_user_tags username administrator
+    
+    # 赋予用户默认vhost的全部操作权限
+    $ sudo rabbitmqctl set_permissions -p / username ".*" ".*" ".*"
+    
+    # 查看用户的权限
+    $ sudo rabbitmqctl list_user_permissions username
+
 # 安装命令维护插件
 
     rabbitmq-plugins enable rabbitmq_management
@@ -48,6 +69,17 @@ tags:
 
 在rabbitmq.config中添加   {loopback_users, []}或者将  %% {loopback_users, []}, 修改为 {loopback_users, []}   （修改时注意后面有个逗号要删掉）
 
+    #只允许admin用户本机访问
+    {loopback_users, ["admin"]}
+
+    
+# 端口
+
+记得要开放5672和15672端口
+
+
+    /sbin/iptables -I INPUT -p tcp --dport 5672 -j ACCEPT
+    /sbin/iptables -I INPUT -p tcp --dport 15672 -j ACCEPT
 
 
 通过在浏览器访问 http://ip:15672 时，进入一个管理界面,这样，我们就完成了RabbitMQ的安装。
