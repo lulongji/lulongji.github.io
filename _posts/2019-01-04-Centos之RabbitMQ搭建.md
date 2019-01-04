@@ -23,7 +23,7 @@ tags:
     http://www.rabbitmq.com/releases/rabbitmq-server/v3.5.6/rabbitmq-server-3.5.6-1.noarch.rpm
 
 
-    rpm -qa|grep rabbitmq 命令查看是否已经安装ok。
+- rpm -qa|grep rabbitmq 命令查看是否已经安装ok。
 
 
 # 常用的命令
