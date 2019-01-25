@@ -89,4 +89,66 @@ lame下载接：[https://sourceforge.net/projects/lame/files/lame/](https://sour
 
 
 
+# shell
+
+如果你特别懒嫌麻烦的话，那么直接copy以下脚本直接执行就可以了。
+
+
+        #!/bin/sh
+        #Based on instructions found here: http://wiki.razuna.com/display/ecp/FFMpeg+Installation+on+CentOS+and+RedHat#FFMpegInstallationonCentOSandRedHat-InstallX264
+
+        if [ "`/usr/bin/whoami`" != "root" ]; then
+        echo "You need to execute this script as root."
+        exit 1
+        fi
+
+        yum -y update
+
+        yum -y install glibc gcc gcc-c++ autoconf automake libtool git make nasm pkgconfig
+        yum -y install SDL-devel a52dec a52dec-devel alsa-lib-devel faac faac-devel faad2 faad2-devel
+        yum -y install freetype-devel giflib gsm gsm-devel imlib2 imlib2-devel lame lame-devel libICE-devel libSM-devel libX11-devel
+        yum -y install libXau-devel libXdmcp-devel libXext-devel libXrandr-devel libXrender-devel libXt-devel
+        yum -y install libogg libvorbis vorbis-tools mesa-libGL-devel mesa-libGLU-devel xorg-x11-proto-devel zlib-devel
+        yum -y install libtheora theora-tools
+        yum -y install ncurses-devel
+        yum -y install libdc1394 libdc1394-devel
+        yum -y install amrnb-devel amrwb-devel opencore-amr-devel
+
+        cd /opt
+        wget https://ffmpeg.org/releases/ffmpeg-4.1.tar.bz2
+
+
+        ###安装lame####
+        wget https://sourceforge.net/projects/lame/files/lame/3.100/lame-3.100.tar.gz
+        tar -zxf lame-3.100.tar.gz
+        cd lame-3.100
+        ./configure && make && make install
+
+        ### 安装yasm
+        yum -y install yasm
+
+        ###安装ffmpeg###
+        cd /opt  && tar -xvf ffmpeg-4.1.tar.bz2 && cd ffmpeg-4.1
+        ./configure --enable-shared --enable-libmp3lame  --prefix=/usr/local/ffmpeg && make && make install
+
+        ##环境配置##
+        echo "/usr/local/ffmpeg/lib" > /etc/ld.so.conf.d/ffmpeg.conf
+
+        ldconfig
+
+        cp /usr/local/ffmpeg/bin/ffmpeg /usr/local/bin/
+        cp /usr/local/ffmpeg/bin/ffprobe /usr/local/bin/
+
+
+
+
+# 打赏
+
+###### 微信
+
+![微信](https://hys-parent.oss-cn-beijing.aliyuncs.com/test/wx1.png?x-oss-process=style/test)
+
+###### 支付宝
+
+![支付宝](https://hys-parent.oss-cn-beijing.aliyuncs.com/test/zfb1.png?x-oss-process=style/test)
 
