@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      CentOs之Nginx
-subtitle:   Nginx
+subtitle:   安装Nginx
 date:       2016-01-12
 author:     Lulongji
 header-img: img/post-bg-hacker.jpg
