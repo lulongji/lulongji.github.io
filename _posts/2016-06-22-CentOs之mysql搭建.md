@@ -112,6 +112,19 @@ Navicat里右击一个连接，选择连接属性，切换到高级选项卡，�
 
 
 
+# 删除mysql
+
+    sudo rm /usr/local/mysql
+    sudo rm -rf /usr/local/mysql*
+    sudo rm -rf /Library/StartupItems/MySQLCOM
+    sudo rm -rf /Library/PreferencePanes/My*
+    vim /etc/hostconfig  (and removed the line MYSQLCOM=-YES-)
+    rm -rf ~/Library/PreferencePanes/My*
+    sudo rm -rf /Library/Receipts/mysql*
+    sudo rm -rf /Library/Receipts/MySQL*
+    sudo rm -rf /var/db/receipts/com.mysql.*
+
+
 
 
 
