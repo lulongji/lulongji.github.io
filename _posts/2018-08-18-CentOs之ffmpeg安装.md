@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      ffmpeg安装
+title:      ffmpeg
 subtitle:   ffmpeg安装
 date:       2018-08-18
 author:     lulongji

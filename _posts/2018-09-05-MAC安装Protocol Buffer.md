@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Protocol Buffer安装
+title:      Protocol Buffer
 subtitle:   Protocol Buffer
 date:       2018-09-05
 author:     lulongji

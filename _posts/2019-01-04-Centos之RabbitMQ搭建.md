@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Centos之RabbitMQ搭建
+title:      RabbitMQ
 subtitle:   RabbitMQ搭建
 date:       2019-01-03
 author:     lulongji
