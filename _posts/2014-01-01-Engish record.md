@@ -1,13 +1,13 @@
 ---
 layout:     post
 title:      English
-subtitle:   博客搭建
+subtitle:   English
 date:       2014-01-01
 author:     Lulongji
 header-img: img/post-bg-swift2.jpg
 catalog: true
 tags:
-    - english
+    - Enlish
 ---
 
 # Phrase
