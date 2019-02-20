@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringBoot搭建系列九
+title:      SpringBoot[九]
 subtitle:   集成OSS 存储
 date:       2018-05-06
 author:     lulongji

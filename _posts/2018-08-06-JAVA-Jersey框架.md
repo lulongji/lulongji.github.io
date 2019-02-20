@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Jersey框架
-subtitle:   Jersey详解
+title:      Jersey
+subtitle:   Jersey frame
 date:       2018-08-06
 author:     lulongji
 header-img: img/post-bg-hacker.jpg

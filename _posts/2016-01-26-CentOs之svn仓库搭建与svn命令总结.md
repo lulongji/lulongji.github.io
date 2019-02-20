@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs之svn仓库搭建与svn命令总结
+title:      CentOs [Install svn & svn command]
 subtitle:   svn仓库搭建与svn命令总结
 date:       2016-01-26
 author:     Lulongji

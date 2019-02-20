@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs之Zookeepr搭建
+title:      CentOs [Install zookpeer]
 subtitle:   Zookeepr搭建
 date:       2016-06-30
 author:     lulongji

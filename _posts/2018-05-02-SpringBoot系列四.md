@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringBoot搭建系列四
+title:      SpringBoot[四]
 subtitle:   打包跳过测试、redis集成
 date:       2018-05-02
 author:     lulongji

@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Zookeeper详解
-subtitle:   Zookeeper详解
+title:      Zookeeper
+subtitle:   简述zookeeper
 date:       2017-12-19
 author:     lulongji
 header-img: img/post-bg-2015.jpg

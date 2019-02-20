@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      SpringBoot搭建系列六
-subtitle:   springBoot切面、过滤器和拦截器、MDC处理
+title:      SpringBoot[六]
+subtitle:   切面、过滤器和拦截器、MDC处理
 date:       2018-05-04
 author:     lulongji
 header-img: img/post-bg-hacker.jpg

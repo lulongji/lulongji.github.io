@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringCloud搭建系列二
+title:      SpringCloud [二]
 subtitle:   注册中心
 date:       2018-06-02
 author:     lulongji

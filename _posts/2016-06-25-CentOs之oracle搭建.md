@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs之oracle搭建
+title:      CentOs [Install oracle]
 subtitle:   oracle搭建
 date:       2016-06-25
 author:     lulongji

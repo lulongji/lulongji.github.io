@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringCloud搭建系列一
+title:      SpringCloud [一]
 subtitle:   版本简介和主要功能组件
 date:       2018-06-01
 author:     lulongji

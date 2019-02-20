@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs之Nginx
+title:      CentOs [Install nginx]
 subtitle:   安装Nginx
 date:       2016-01-12
 author:     Lulongji

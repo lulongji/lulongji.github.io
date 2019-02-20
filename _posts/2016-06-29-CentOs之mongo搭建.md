@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs之mongodb搭建
+title:      CentOs [Install mongodb]
 subtitle:   mongodb搭建
 date:       2016-06-29
 author:     lulongji

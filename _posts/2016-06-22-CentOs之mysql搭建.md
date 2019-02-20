@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs之mysql搭建
+title:      CentOs [Install mysql]
 subtitle:   mysql搭建
 date:       2016-06-22
 author:     lulongji

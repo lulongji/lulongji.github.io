@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs7之Ant安装
+title:      CentOs [Install ant]
 subtitle:   Ant
 date:       2017-01-01
 author:     lulongji

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringBoot搭建系列五
+title:      SpringBoot[五]
 subtitle:   Ehcache集成
 date:       2018-05-03
 author:     lulongji

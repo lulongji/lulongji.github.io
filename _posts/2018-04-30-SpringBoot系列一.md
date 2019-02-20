@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      SpringBoot搭建系列一
-subtitle:   初始环境搭建
+title:      SpringBoot[一]
+subtitle:   Hello world
 date:       2018-04-30
 author:     lulongji
 header-img: img/post-bg-hacker.jpg

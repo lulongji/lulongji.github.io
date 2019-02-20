@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs之Jdk环境搭建
+title:      CentOs [Install jdk]
 subtitle:   Jdk环境搭建
 date:       2016-01-26
 author:     Lulongji

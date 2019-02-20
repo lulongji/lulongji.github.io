@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs7之更新yum源
+title:      CentOs7 [Update the yum source]
 subtitle:   更新yum源
 date:       2015-12-25
 author:     lulongji

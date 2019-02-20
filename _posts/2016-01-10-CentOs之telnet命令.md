@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs之telnet命令
+title:      CentOs [Install telnet]
 subtitle:   telnet命令
 date:       2016-01-10
 author:     Lulongji

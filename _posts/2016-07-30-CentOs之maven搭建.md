@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      CentOs之Maven搭建
-subtitle:   Maven搭建
+title:      CentOs [Install maven]
+subtitle:   CentOs之Maven搭建
 date:       2016-07-30
 author:     lulongji
 header-img: img/post-bg-2015.jpg

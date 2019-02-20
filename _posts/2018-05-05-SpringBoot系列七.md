@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringBoot搭建系列七
+title:      SpringBoot[七]
 subtitle:   事务处理
 date:       2018-05-05
 author:     lulongji

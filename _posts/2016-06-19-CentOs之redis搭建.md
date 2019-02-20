@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      CentOs之Redis搭建
+title:      CentOs [Install redis]
 subtitle:   Redis搭建
 date:       2016-06-19
 author:     lulongji
