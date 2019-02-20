@@ -70,16 +70,17 @@ header-img: "img/post-bg-rwd.jpg"
     function _render(){
         var _hash = window.location.hash;
         // en
-        if(_hash == "#en"){
+        if(_hash == "#zh"){
             $select.selectedIndex = 0;
-            $en.style.display = "block";
-            $zh.style.display = "none";
+            $zh.style.display = "block";
+            $en.style.display = "none";
         // zh by default
         }else{
             // not trigger onChange, otherwise cause a loop call.
             $select.selectedIndex = 1;
-            $zh.style.display = "block";
-            $en.style.display = "none";
+            $en.style.display = "block";
+            $zh.style.display = "none";
+      
         }
     }
 
