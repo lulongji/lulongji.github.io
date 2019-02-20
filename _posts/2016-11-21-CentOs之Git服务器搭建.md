@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Git服务器搭建
+title:      Git [install]
 subtitle:   Git
 date:       2016-11-21
 author:     lulongji

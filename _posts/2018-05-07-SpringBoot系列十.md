@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringBoot[十]
+title:      SpringBoot[deployment]
 subtitle:   CentOS 部署 
 date:       2018-05-07
 author:     lulongji

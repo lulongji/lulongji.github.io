@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Docker [三]
+title:      Docker [Docker-Compose]
 subtitle:   CentOS7下安装Docker-Compose
 date:       2017-11-05
 author:     lulongji

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringBoot[一]
+title:      SpringBoot[Hello world]
 subtitle:   Hello world
 date:       2018-04-30
 author:     lulongji

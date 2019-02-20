@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringCloud [二]
+title:      SpringCloud [registry]
 subtitle:   注册中心
 date:       2018-06-02
 author:     lulongji

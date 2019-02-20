@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringBoot[三]
+title:      SpringBoot[logback]
 subtitle:   logback
 date:       2018-05-01
 author:     lulongji

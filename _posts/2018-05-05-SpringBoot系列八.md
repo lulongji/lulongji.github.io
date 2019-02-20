@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      SpringBoot[八]
+title:      SpringBoot[template & deployment]
 subtitle:   集成Freemaker模板引擎、程序热部署
 date:       2018-05-05
 author:     lulongji
