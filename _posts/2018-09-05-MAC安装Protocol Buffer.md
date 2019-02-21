@@ -109,14 +109,8 @@ tags:
 ``` 注意空格```
 
 
-# 打赏
+# 声明
+本文只做学习参考，如有任何问题的地方欢迎指正。
 
-###### 微信
-
-![微信](https://hys-parent.oss-cn-beijing.aliyuncs.com/test/wx1.png?x-oss-process=style/test)
-
-###### 支付宝
-
-![支付宝](https://hys-parent.oss-cn-beijing.aliyuncs.com/test/zfb1.png?x-oss-process=style/test)
-
-
+我的邮箱：
+- ```lulongji2011@163.com``
