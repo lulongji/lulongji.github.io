@@ -54,28 +54,12 @@ kramdown:
 
 
 
-# 评论系统 https://sjq597.github.io/2018/05/18/Hexo-使用Gitment评论功能/
+# 评论系统
 gitment_username : lulongji
 gitment_id : 8446572
 gitment_repo : lulongji.github.io
 gitment_client_id : cb220d3e2a57858e197e
 gitment_client_secret : 19bd870bb56a4ff4553142566933344d0e65e063
-
-
-gitment:
-  enable: true
-  mint: true
-  count: true
-  lazy: false
-  cleanly: false
-  language:
-  github_user: lulongji
-  github_repo: lulongji.github.io
-  client_id: cb220d3e2a57858e197e
-  client_secret: 19bd870bb56a4ff4553142566933344d0e65e063
-  proxy_gateway:
-  redirect_protocol:
-
 
 
 
