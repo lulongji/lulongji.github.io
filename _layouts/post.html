@@ -147,7 +147,7 @@ layout: default
 {% if site.gitment_username %}
 <script>
 var gitment = new Gitment({
-  id: '{{page.id}}', // 可选。默认为 location.href
+  id: '{{page.subtitle}}', // 可选。默认为 location.href
   owner: '{{site.gitment_username }}',
   repo: '{{site.gitment_repo}}',
   oauth: {
