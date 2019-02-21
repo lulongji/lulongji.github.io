@@ -144,10 +144,9 @@ layout: default
 </article>
 
 
-<!-- -->
 
 
-<% if(site.gitment.enable) { %>
+{% if(site.gitment.enable) %}
     <div id="gitment_title" class="gitment_title"></div>
     <div id="container" style="display:none"></div>
     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
@@ -185,7 +184,7 @@ layout: default
     
       showGitment();
     </script>
-    <% } %>
+   {% endif %}
 
 
 
