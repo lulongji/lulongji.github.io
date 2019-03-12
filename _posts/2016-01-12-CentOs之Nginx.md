@@ -76,6 +76,7 @@ tags:
 # 检测
 
     /usr/local/nginx/sbin/nginx -t
+    
 
 
 
