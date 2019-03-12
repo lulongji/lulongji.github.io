@@ -101,6 +101,7 @@ _其中Tomcat 的SessionId 是通过 SHA1算法计算得到的，在计算sessio
  **当然，前两种办法肯定不可靠，我的开发生涯中几乎没有这么改过tomcat的，再说jvm开发人员又不是二百五，他们没有选择`/dev/urandom` 肯定是有原因的，于是Google了一下，大略就是安全性的问题，如有兴趣可以自己去查看。那么第三种解决办法呼之欲出，那就是增增大/dev/random的熵池。** 
 
 问题的原因是由于熵池不够大，所以增大它是最彻底的方法
+
 #### 第三种：增大熵池
 
 -         查看熵池大小：`cat /proc/sys/kernel/random/entropy_avail`
