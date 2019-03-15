@@ -30,9 +30,16 @@ Centos7更新yum源。
     yum -y update
  
 
-#如果yum正在运行，要先关掉进程   
+# 如果yum正在运行，要先关掉进程   
 
     rm -f  /var/run/yum.pid
+
+
+# 如果yum install没有可用软件包
+
+    yum install epel-release;
+
+
 
 
 
