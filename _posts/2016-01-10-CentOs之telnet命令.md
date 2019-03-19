@@ -43,3 +43,11 @@ tags:
     （或service xinetd start）
     
 
+
+
+# 说明
+
+本文只做学习参考，如有任何不准确的地方欢迎指正。
+
+我的邮箱：
+- ```lulongji2011@163.com```
