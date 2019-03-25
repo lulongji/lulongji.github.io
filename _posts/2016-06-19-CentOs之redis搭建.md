@@ -19,6 +19,8 @@ tags:
 ### 下载源码：
     wget http://download.redis.io/releases/redis-3.2.8.tar.gz
 
+    其他版本查看：http://download.redis.io/releases/
+
 ### 解压源码：
     tar -zxvf redis-3.2.8.tar.gz
 
