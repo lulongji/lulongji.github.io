@@ -50,46 +50,48 @@ tags:
 # 配置
 
 
-    vim elasticsearch.yml
+        vim elasticsearch.yml
 
 
-    node.name: node-1 
-    network.host: 0.0.0.0
-    cluster.initial_master_nodes: ["node-1"]
+        node.name: node-1 
+        network.host: 0.0.0.0
+        cluster.initial_master_nodes: ["node-1"]
 
-    增加外网访问：
-    http.cors.enabled: true
-    http.cors.allow-origin: "*"
+        增加外网访问：
+        http.cors.enabled: true
+        http.cors.allow-origin: "*"
+
+
 
 
 - 切换root用户
 
 
 
-    vim  etc/sysctl.conf 
-    
-    添加
+        vim  etc/sysctl.conf 
+        
+        添加
 
-    vm.max_map_count=655360
+        vm.max_map_count=655360
 
-    保存后执行
+        保存后执行
 
-    sysctl -p
+        sysctl -p
 
-    vim /etc/security/limits.conf
-    添加
+        vim /etc/security/limits.conf
+        添加
 
-    elasticsearch soft nofile 65536
-    elasticsearch hard nofile 65536
-    elasticsearch soft nproc 4096
-    elasticsearch hard nproc 4096
+        elasticsearch soft nofile 65536
+        elasticsearch hard nofile 65536
+        elasticsearch soft nproc 4096
+        elasticsearch hard nproc 4096
 
 - 切换es用户 
 
 
 
-    重启动
-    ./elasticsearch
+        重启动
+        ./elasticsearch
 
 
 
