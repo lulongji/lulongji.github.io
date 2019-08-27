@@ -49,6 +49,8 @@ tags:
 
 # 配置
 
+- 基础配置
+
 
         vim elasticsearch.yml
 
