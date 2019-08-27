@@ -13,7 +13,7 @@ tags:
 
 # 安装
 
-- [elasticsearch](https://www.elastic.co/cn/downloads/elasticsearch)官网下载：https://www.elastic.co/cn/downloads/elasticsearch
+- [elasticsearch](https://www.elastic.co/cn/downloads/elasticsearch)官网下载：[https://www.elastic.co/cn/downloads/elasticsearch](https://www.elastic.co/cn/downloads/elasticsearch)
 
 
 # 开始
