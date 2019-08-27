@@ -21,34 +21,33 @@ tags:
 - 解压
 
 
-    tar -zxvf elasticsearch-7.3.1.tar.gz 
-    mv elasticsearch-7.3.1 elasticsearch
+        tar -zxvf elasticsearch-7.3.1.tar.gz 
+        mv elasticsearch-7.3.1 elasticsearch
 
 
 - 创建用户组
 
 
-    groupadd es
+        groupadd es
 
-    创建用户，-e代表把es用户分配到es用户组中，-p代表给es用户设置密码为123456：
-    useradd es -g es -p 123456
+        创建用户，-e代表把es用户分配到es用户组中，-p代表给es用户设置密码为123456：
+        useradd es -g es -p 123456
 
-    修改权限
-    chown -R es:es /usr/local/elasticsearch
+        修改权限
+        chown -R es:es /usr/local/elasticsearch
 
 
 - 安装
 
 
-    su es
-    cd /usr/local/elasticsearch/bin
-        
+        su es
+        cd /usr/local/elasticsearch/bin
+            
 
-    查看是否运行成功：
-    curl http://localhost:9200
+        查看是否运行成功：
+        curl http://localhost:9200
 
 # 配置
-
 
 
     vim elasticsearch.yml
@@ -64,6 +63,7 @@ tags:
 
 
 - 切换root用户
+
 
 
     vim  etc/sysctl.conf 
@@ -85,6 +85,7 @@ tags:
     elasticsearch hard nproc 4096
 
 - 切换es用户 
+
 
 
     重启动
