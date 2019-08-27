@@ -20,10 +20,13 @@ tags:
 
 - 解压
 
+
     tar -zxvf elasticsearch-7.3.1.tar.gz 
     mv elasticsearch-7.3.1 elasticsearch
 
+
 - 创建用户组
+
 
     groupadd es
 
@@ -33,7 +36,9 @@ tags:
     修改权限
     chown -R es:es /usr/local/elasticsearch
 
+
 - 安装
+
 
     su es
     cd /usr/local/elasticsearch/bin
@@ -43,6 +48,8 @@ tags:
     curl http://localhost:9200
 
 # 配置
+
+
 
     vim elasticsearch.yml
 
@@ -57,6 +64,7 @@ tags:
 
 
 - 切换root用户
+
 
     vim  etc/sysctl.conf 
     
@@ -77,6 +85,7 @@ tags:
     elasticsearch hard nproc 4096
 
 - 切换es用户 
+
 
     重启动
     ./elasticsearch
