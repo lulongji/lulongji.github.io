@@ -21,8 +21,7 @@ tags:
     mv  mongodb-linux-x86_64-3.0.6/ /usr/local/mongodb # 将解压包拷贝到指定目录
 
 - MongoDB 的可执行文件位于 bin 目录下，所以可以将其添加到 PATH 路径中：
-    export PATH=<mongodb-install-directory>/bin:$PATH
-<mongodb-install-directory> 为你 MongoDB 的安装路径。如本文的 /usr/local/mongodb 。
+    export PATH=<mongodb-install-directory>/bin:$PATH<mongodb-install-directory> 为你 MongoDB 的安装路径。如本文的 /usr/local/mongodb 。
 
 # 创建数据库目录
 MongoDB的数据存储在data目录的db目录下，但是这个目录在安装过程不会自动创建，所以你需要手动创建data目录，并在data目录中创建db目录。
