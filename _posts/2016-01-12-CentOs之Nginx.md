@@ -76,6 +76,11 @@ tags:
 # 检测
 
     /usr/local/nginx/sbin/nginx -t
+
+
+# https
+
+    ![https://www.jianshu.com/p/9f756dbc39d4](https://www.jianshu.com/p/9f756dbc39d4)
     
 
 
